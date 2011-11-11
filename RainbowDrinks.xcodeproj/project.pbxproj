@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* RainbowDrinksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* RainbowDrinksAppDelegate.m */; };
+		1D3623260D0F684500981E51 /* RDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* RDAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -15,12 +15,14 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28D3F202112F7DC200FD0661 /* RainbowDrinks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* RainbowDrinks.xcdatamodeld */; };
+		FD53F107140215B50094D17E /* RDStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = FD53F106140215B50094D17E /* RDStorage.m */; };
+		FD53F10A140215CA0094D17E /* RDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD53F109140215CA0094D17E /* RDUser.m */; };
 		FDDB77C213E61BC7001DF23E /* RDWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB77C113E61BC7001DF23E /* RDWelcomeViewController.m */; };
 		FDDB77C913E6286A001DF23E /* RDNewUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB77C813E6286A001DF23E /* RDNewUserViewController.m */; };
 		FDDB77CC13E628A1001DF23E /* RDChooseUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB77CB13E628A1001DF23E /* RDChooseUserViewController.m */; };
-		FDE382E713C93DF700B5032C /* RDWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE382E613C93DF700B5032C /* RDWelcomeViewController.xib */; };
-		FDE382E913C93F2700B5032C /* RDNewUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE382E813C93F2700B5032C /* RDNewUserViewController.xib */; };
-		FDE382EF13C9433300B5032C /* RDChooseUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE382EE13C9433300B5032C /* RDChooseUserViewController.xib */; };
+		FDE382E713C93DF700B5032C /* RDWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE382E613C93DF700B5032C /* RDWelcomeView.xib */; };
+		FDE382E913C93F2700B5032C /* RDNewUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE382E813C93F2700B5032C /* RDNewUserView.xib */; };
+		FDE382EF13C9433300B5032C /* RDChooseUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE382EE13C9433300B5032C /* RDChooseUserView.xib */; };
 		FDE382F113C9448700B5032C /* RDChooseCategory.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE382F013C9448700B5032C /* RDChooseCategory.xib */; };
 		FDE382F313C9459800B5032C /* RDChooseDrink.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE382F213C9459800B5032C /* RDChooseDrink.xib */; };
 		FDE382F513C946A000B5032C /* RDMixingDrink.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE382F413C946A000B5032C /* RDMixingDrink.xib */; };
@@ -28,26 +30,30 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* RainbowDrinksAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RainbowDrinksAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* RainbowDrinksAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RainbowDrinksAppDelegate.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* RDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDAppDelegate.h; sourceTree = "<group>"; usesTabs = 1; };
+		1D3623250D0F684500981E51 /* RDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDAppDelegate.m; sourceTree = "<group>"; usesTabs = 1; };
 		1D6058910D05DD3D006BFB54 /* RainbowDrinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainbowDrinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28860B760F44E54D00985440 /* RainbowDrinks.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = RainbowDrinks.xcdatamodel; sourceTree = "<group>"; };
 		28860BE40F44EE6400985440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28A0AAE50D9B0CCF005BE974 /* RainbowDrinks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RainbowDrinks_Prefix.pch; sourceTree = "<group>"; };
+		28A0AAE50D9B0CCF005BE974 /* RainbowDrinks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RainbowDrinks_Prefix.pch; sourceTree = "<group>"; usesTabs = 1; };
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; usesTabs = 1; };
 		8D1107310486CEB800E47090 /* RainbowDrinks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RainbowDrinks-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		FDDB77C013E61BC7001DF23E /* RDWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDWelcomeViewController.h; sourceTree = "<group>"; };
-		FDDB77C113E61BC7001DF23E /* RDWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDWelcomeViewController.m; sourceTree = "<group>"; };
-		FDDB77C713E6286A001DF23E /* RDNewUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDNewUserViewController.h; sourceTree = "<group>"; };
-		FDDB77C813E6286A001DF23E /* RDNewUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDNewUserViewController.m; sourceTree = "<group>"; };
-		FDDB77CA13E628A1001DF23E /* RDChooseUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDChooseUserViewController.h; sourceTree = "<group>"; };
-		FDDB77CB13E628A1001DF23E /* RDChooseUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDChooseUserViewController.m; sourceTree = "<group>"; };
-		FDE382E613C93DF700B5032C /* RDWelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RDWelcomeViewController.xib; sourceTree = "<group>"; };
-		FDE382E813C93F2700B5032C /* RDNewUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RDNewUserViewController.xib; sourceTree = "<group>"; };
-		FDE382EE13C9433300B5032C /* RDChooseUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RDChooseUserViewController.xib; sourceTree = "<group>"; };
+		FD53F105140215B50094D17E /* RDStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDStorage.h; sourceTree = "<group>"; usesTabs = 1; };
+		FD53F106140215B50094D17E /* RDStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDStorage.m; sourceTree = "<group>"; usesTabs = 1; };
+		FD53F108140215CA0094D17E /* RDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDUser.h; sourceTree = "<group>"; usesTabs = 1; };
+		FD53F109140215CA0094D17E /* RDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDUser.m; sourceTree = "<group>"; usesTabs = 1; };
+		FDDB77C013E61BC7001DF23E /* RDWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDWelcomeViewController.h; sourceTree = "<group>"; usesTabs = 1; };
+		FDDB77C113E61BC7001DF23E /* RDWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDWelcomeViewController.m; sourceTree = "<group>"; usesTabs = 1; };
+		FDDB77C713E6286A001DF23E /* RDNewUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDNewUserViewController.h; sourceTree = "<group>"; usesTabs = 1; };
+		FDDB77C813E6286A001DF23E /* RDNewUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDNewUserViewController.m; sourceTree = "<group>"; usesTabs = 1; };
+		FDDB77CA13E628A1001DF23E /* RDChooseUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDChooseUserViewController.h; sourceTree = "<group>"; usesTabs = 1; };
+		FDDB77CB13E628A1001DF23E /* RDChooseUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDChooseUserViewController.m; sourceTree = "<group>"; usesTabs = 1; };
+		FDE382E613C93DF700B5032C /* RDWelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RDWelcomeView.xib; sourceTree = "<group>"; };
+		FDE382E813C93F2700B5032C /* RDNewUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RDNewUserView.xib; sourceTree = "<group>"; };
+		FDE382EE13C9433300B5032C /* RDChooseUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RDChooseUserView.xib; sourceTree = "<group>"; };
 		FDE382F013C9448700B5032C /* RDChooseCategory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RDChooseCategory.xib; path = ChooseCategory.xib; sourceTree = "<group>"; };
 		FDE382F213C9459800B5032C /* RDChooseDrink.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RDChooseDrink.xib; path = ChooseDrink.xib; sourceTree = "<group>"; };
 		FDE382F413C946A000B5032C /* RDMixingDrink.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RDMixingDrink.xib; path = MixingDrink.xib; sourceTree = "<group>"; };
@@ -71,14 +77,18 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* RainbowDrinksAppDelegate.h */,
-				1D3623250D0F684500981E51 /* RainbowDrinksAppDelegate.m */,
+				1D3623240D0F684500981E51 /* RDAppDelegate.h */,
+				1D3623250D0F684500981E51 /* RDAppDelegate.m */,
 				FDDB77C013E61BC7001DF23E /* RDWelcomeViewController.h */,
 				FDDB77C113E61BC7001DF23E /* RDWelcomeViewController.m */,
 				FDDB77C713E6286A001DF23E /* RDNewUserViewController.h */,
 				FDDB77C813E6286A001DF23E /* RDNewUserViewController.m */,
 				FDDB77CA13E628A1001DF23E /* RDChooseUserViewController.h */,
 				FDDB77CB13E628A1001DF23E /* RDChooseUserViewController.m */,
+				FD53F105140215B50094D17E /* RDStorage.h */,
+				FD53F106140215B50094D17E /* RDStorage.m */,
+				FD53F108140215CA0094D17E /* RDUser.h */,
+				FD53F109140215CA0094D17E /* RDUser.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -118,9 +128,9 @@
 				8D1107310486CEB800E47090 /* RainbowDrinks-Info.plist */,
 				28D3F201112F7DC200FD0661 /* RainbowDrinks.xcdatamodeld */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
-				FDE382E613C93DF700B5032C /* RDWelcomeViewController.xib */,
-				FDE382E813C93F2700B5032C /* RDNewUserViewController.xib */,
-				FDE382EE13C9433300B5032C /* RDChooseUserViewController.xib */,
+				FDE382E613C93DF700B5032C /* RDWelcomeView.xib */,
+				FDE382E813C93F2700B5032C /* RDNewUserView.xib */,
+				FDE382EE13C9433300B5032C /* RDChooseUserView.xib */,
 				FDE382F013C9448700B5032C /* RDChooseCategory.xib */,
 				FDE382F213C9459800B5032C /* RDChooseDrink.xib */,
 				FDE382F413C946A000B5032C /* RDMixingDrink.xib */,
@@ -190,9 +200,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
-				FDE382E713C93DF700B5032C /* RDWelcomeViewController.xib in Resources */,
-				FDE382E913C93F2700B5032C /* RDNewUserViewController.xib in Resources */,
-				FDE382EF13C9433300B5032C /* RDChooseUserViewController.xib in Resources */,
+				FDE382E713C93DF700B5032C /* RDWelcomeView.xib in Resources */,
+				FDE382E913C93F2700B5032C /* RDNewUserView.xib in Resources */,
+				FDE382EF13C9433300B5032C /* RDChooseUserView.xib in Resources */,
 				FDE382F113C9448700B5032C /* RDChooseCategory.xib in Resources */,
 				FDE382F313C9459800B5032C /* RDChooseDrink.xib in Resources */,
 				FDE382F513C946A000B5032C /* RDMixingDrink.xib in Resources */,
@@ -207,11 +217,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* RainbowDrinksAppDelegate.m in Sources */,
+				1D3623260D0F684500981E51 /* RDAppDelegate.m in Sources */,
 				28D3F202112F7DC200FD0661 /* RainbowDrinks.xcdatamodeld in Sources */,
 				FDDB77C213E61BC7001DF23E /* RDWelcomeViewController.m in Sources */,
 				FDDB77C913E6286A001DF23E /* RDNewUserViewController.m in Sources */,
 				FDDB77CC13E628A1001DF23E /* RDChooseUserViewController.m in Sources */,
+				FD53F107140215B50094D17E /* RDStorage.m in Sources */,
+				FD53F10A140215CA0094D17E /* RDUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

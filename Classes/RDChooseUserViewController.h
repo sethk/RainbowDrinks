@@ -6,10 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface RDChooseUserViewController : UIViewController
+@interface RDChooseUserViewController : UIViewController <UITableViewDataSource>
 {
+	NSArray *_users;
 }
 
 @end

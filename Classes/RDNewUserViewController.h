@@ -6,10 +6,14 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface RDNewUserViewController : UIViewController
 {
+	IBOutlet UITextField *_firstNameField;
+	IBOutlet UITextField *_lastNameField;
+	IBOutlet UILabel *_nameErrorLabel;
+	IBOutlet UIButton *_showLocationButton;
+	IBOutlet UITextField *_countryField;
+	IBOutlet UITextField *_cityField;
 	IBOutlet UIViewController *_locationViewController;
 	IBOutlet UIViewController *_avatarViewController;
 }

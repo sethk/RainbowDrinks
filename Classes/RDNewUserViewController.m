@@ -7,25 +7,41 @@
 //
 
 #import "RDNewUserViewController.h"
+#import "RDStorage.h"
+#import "RDUser.h"
 
 @implementation RDNewUserViewController
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
+- (void)_validateFields
+{
+	NSString *firstName = [_firstNameField text], *lastName = [_lastNameField text];
+	NSString *errorText = @"";
+	BOOL isValid = NO;
+	if ([firstName length] && [lastName length])
+	{
+		if ([[RDStorage sharedStorage] userWithFirstName:firstName lastName:lastName])
+			errorText = _(@"Sorry, this name is already being used.  Please add a middle name or initial.");
+		else
+			isValid = YES;
+	}
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
+	[_nameErrorLabel setText:errorText];
+	[_showLocationButton setEnabled:isValid];
 }
-*/
+
+- (void)_nameChanged:(NSNotification *)notification
+{
+	[self _validateFields];
+}
+
+- (void)_clearFields
+{
+	[_firstNameField setText:@""];
+	[_lastNameField setText:@""];
+	[_cityField setText:@""];
+	[_countryField setText:@""];
+	[self _validateFields];
+}
 
 - (void)viewDidLoad
 {
@@ -33,33 +49,31 @@
 
 	[[_locationViewController navigationItem] setHidesBackButton:YES];
 	[[_avatarViewController navigationItem] setHidesBackButton:YES];
+
+	NSNotificationCenter *notifier = [NSNotificationCenter defaultCenter];
+	[notifier addObserver:self
+				 selector:@selector(_nameChanged:)
+					 name:UITextFieldTextDidChangeNotification
+				   object:_firstNameField];
+	[notifier addObserver:self
+				 selector:@selector(_nameChanged:)
+					 name:UITextFieldTextDidChangeNotification
+				   object:_lastNameField];
+
+	[self _clearFields];
 }
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
-- (void)didReceiveMemoryWarning
+- (void)viewDidUnload
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
+	NSNotificationCenter *notifier = [NSNotificationCenter defaultCenter];
+	[notifier removeObserver:self name:UITextFieldTextDidChangeNotification object:_firstNameField];
+	[notifier removeObserver:self name:UITextFieldTextDidChangeNotification object:_lastNameField];
 }
 
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-
-- (void)dealloc {
-    [super dealloc];
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+	[self _clearFields];
 }
 
 - (IBAction)showLocationView:(id)sender
@@ -79,6 +93,11 @@
 
 - (IBAction)createUser:(id)sender
 {
+	RDUser *newUser = [[RDStorage sharedStorage] makeUserWithFirstName:[_firstNameField text]
+															  lastName:[_lastNameField text]];
+	[newUser setCountryName:[_countryField text]];
+	[newUser setCityName:[_cityField text]];
+	[[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 @end
