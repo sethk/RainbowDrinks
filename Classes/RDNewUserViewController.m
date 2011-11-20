@@ -7,6 +7,7 @@
 //
 
 #import "RDNewUserViewController.h"
+#import "RDUserSelectionDelegate.h"
 #import "RDStorage.h"
 #import "RDUser.h"
 
@@ -97,7 +98,7 @@
 															  lastName:[_lastNameField text]];
 	[newUser setCountryName:[_countryField text]];
 	[newUser setCityName:[_cityField text]];
-	[[self navigationController] popToRootViewControllerAnimated:YES];
+	[_delegate controller:self didSelectUser:newUser];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "RDChooseUserViewController.h"
+#import "RDUserSelectionDelegate.h"
 #import "RDStorage.h"
 #import "RDUser.h"
 
@@ -42,6 +43,12 @@
 	RDUser *user = [_users objectAtIndex:[indexPath row]];
 	[[cell textLabel] setText:[NSString stringWithFormat:@"%@, %@", [user lastName], [user firstName]]];
 	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	RDUser *user = [_users objectAtIndex:[indexPath row]];
+	[_delegate controller:self didSelectUser:user];
 }
 
 @end

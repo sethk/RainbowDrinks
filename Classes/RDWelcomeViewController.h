@@ -6,13 +6,16 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-@interface RDWelcomeViewController : UIViewController
+#import "RDUserSelectionDelegate.h"
+
+@interface RDWelcomeViewController : UIViewController <RDUserSelectionDelegate>
 {
 	IBOutlet UIViewController *_newUserViewController;
 	IBOutlet UIViewController *_chooseUserViewController;
+	IBOutlet UIViewController *_chooseDrinkViewController;
 }
 
-- (IBAction)newUser:(id)sender;
-- (IBAction)chooseUser:(id)sender;
+- (IBAction)presentNewUser:(id)sender;
+- (IBAction)presentChooseUser:(id)sender;
 
 @end

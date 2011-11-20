@@ -6,6 +6,8 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+@protocol RDUserSelectionDelegate;
+
 @interface RDNewUserViewController : UIViewController
 {
 	IBOutlet UITextField *_firstNameField;
@@ -16,6 +18,7 @@
 	IBOutlet UITextField *_cityField;
 	IBOutlet UIViewController *_locationViewController;
 	IBOutlet UIViewController *_avatarViewController;
+	IBOutlet id<RDUserSelectionDelegate> _delegate;
 }
 
 - (IBAction)showLocationView:(id)sender;

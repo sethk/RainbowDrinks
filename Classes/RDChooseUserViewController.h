@@ -6,8 +6,12 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-@interface RDChooseUserViewController : UIViewController <UITableViewDataSource>
+@protocol RDUserSelectionDelegate;
+
+@interface RDChooseUserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
+	IBOutlet id<RDUserSelectionDelegate> _delegate;
+
 	NSArray *_users;
 }
 

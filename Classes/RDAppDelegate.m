@@ -24,6 +24,7 @@
     [_managedObjectContext release];
     [_managedObjectModel release];
     [_persistentStoreCoordinator release];
+	[_currentUser release];
 
 	[super dealloc];
 }
@@ -109,6 +110,11 @@
 {
 	return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+#pragma mark -
+#pragma mark Properties
+
+@synthesize currentUser = _currentUser;
 
 @end
 
